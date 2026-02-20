@@ -9,75 +9,60 @@ body {
 a {
   color: #000000;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+a :hover {
+  color: rgba(0, 160, 146, 1);
 }
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
-header.site-header {
-  padding: 18px 0;
-  background-color: #f58021;
+.site-header {
+  background: #f58021;
+  height: 110px; /* как в Figma */
+  display: flex;
+  align-items: center; /* вертикально по центру */
 }
 
 .header-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 16px;
+  width: 100%;
 }
 
-.brand {
+/* правый блок (меню + соц) уходит вправо */
+.links-container {
+  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 65px; /* расстояние между меню и иконками */
 }
 
-.brand img {
-  width: 140px;
-  height: auto;
-}
-
+/* меню */
 .nav {
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 48.25px; /* расстояние между пунктами */
 }
 
-.nav a {
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition:
-    background 0.15s ease,
-    color 0.15s ease;
-  font-weight: 600;
-}
-
-.nav a:hover {
-  background: rgba(17, 17, 17, 0.06);
-  color: #0f172a;
-  cursor: pointer;
-}
-
-.nav a.is-active {
-  color: #0f172a;
-  background: rgba(17, 17, 17, 0.08);
-}
-
+/* соц. блок */
 .social {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.social img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+/* убираем белые круги (если они были) */
+.social a {
+  border: none;
+  background: transparent;
+  width: auto;
+  height: auto;
 }
-
-.social a:hover {
-  transform: translateY(-1px);
-  background: rgba(17, 17, 17, 0.06);
+.social img {
+  width: 40px; /* подгоняй под Figma */
+  height: 40px;
 }
